@@ -179,7 +179,7 @@ const gammaCorrectionPass = new ShaderPass(GammaCorrectionShader);
 composer.addPass(gammaCorrectionPass);
 
 const rgbShiftPass = new ShaderPass(RGBShiftShader);
-rgbShiftPass.uniforms['amount'].value = 0.003;
+rgbShiftPass.uniforms['amount'].value = 0.002;
 
 composer.addPass(rgbShiftPass);
 
@@ -198,7 +198,7 @@ composer.addPass(rgbShiftPass);
 // effectSobel.uniforms[ 'resolution' ].value.y = window.innerHeight * window.devicePixelRatio;
 // composer.addPass( effectSobel );
 
-composer.addPass( new GlitchPass())
+composer.addPass( new GlitchPass(10))
 
 
 /**
